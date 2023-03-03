@@ -1,7 +1,0 @@
-FROM python:3.9
-RUN mkdir /code
-COPY . /code
-WORKDIR /code
-RUN pip install requirements.txt
-EXPOSE $PORT
-CMD gunicorn --workers=1 --bind 0.0.0.0:$PORT app:app
